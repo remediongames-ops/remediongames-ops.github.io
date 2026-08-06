@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrogSlap – Android Arcade Game</title>
+  <meta name="description" content="FrogSlap is a fast-paced Android arcade game by Remedion Games. Tap frogs, defeat bosses, collect rewards, unlock runes, and progress through different worlds.">
+  <style>
+    :root {
+      --bg: #071a1d;
+      --panel: #0d2a2f;
+      --accent: #91e36b;
+      --accent-dark: #4fb84e;
+      --text: #f4fff1;
+      --muted: #c7d9cf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(74, 164, 106, 0.25), transparent 40%),
+        linear-gradient(180deg, #0a2025 0%, var(--bg) 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 860px;
+      background: rgba(13, 42, 47, 0.94);
+      border: 1px solid rgba(145, 227, 107, 0.25);
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    .studio {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.95;
+    }
+
+    .tagline {
+      margin: 22px 0 0;
+      font-size: 1.35rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    section { margin-top: 38px; }
+
+    h2 {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.045);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      background: var(--accent);
+      color: #08200c;
+    }
+
+    a.button.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent-dark);
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer a { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="studio">Remedion Games</p>
+    <h1>FrogSlap</h1>
+
+    <p class="tagline">
+      FrogSlap is a fast-paced mobile arcade game for Android.
+      Players tap frogs, avoid dangerous enemies, collect rewards,
+      unlock runes, defeat bosses, and progress through a series of unique worlds.
+    </p>
+
+    <section>
+      <h2>What the app does</h2>
+      <p>
+        The purpose of FrogSlap is to provide a fun, skill-based arcade experience
+        built around quick reactions and progression. Players complete runs,
+        earn in-game resources, unlock upgrades, discover new frog types,
+        and challenge increasingly difficult bosses.
+      </p>
+    </section>
+
+    <section>
+      <h2>Game features</h2>
+      <div class="features">
+        <div class="feature">
+          <strong>Fast arcade gameplay</strong>
+          Tap frogs quickly and accurately while reacting to different enemy types.
+        </div>
+        <div class="feature">
+          <strong>World progression</strong>
+          Travel through multiple themed worlds with unique visuals and challenges.
+        </div>
+        <div class="feature">
+          <strong>Runes and rewards</strong>
+          Collect resources, unlock runes, and improve your abilities between runs.
+        </div>
+        <div class="feature">
+          <strong>Boss battles</strong>
+          Defeat powerful bosses and earn special rewards.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Google services</h2>
+      <p>
+        FrogSlap may use Google Play Games Services for features such as player sign-in,
+        achievements, and leaderboards. It may also use Google services for purchases,
+        advertising, diagnostics, and app functionality, as described in the Privacy Policy.
+      </p>
+    </section>
+
+    <div class="actions">
+      <a class="button" href="privacy.html">Privacy Policy</a>
+      <a class="button secondary" href="mailto:remediongames@gmail.com">Contact Remedion Games</a>
+    </div>
+
+    <footer>
+      <p>
+        FrogSlap is developed and published by Remedion Games.<br>
+        Contact: <a href="mailto:remediongames@gmail.com">remediongames@gmail.com</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
