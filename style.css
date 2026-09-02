@@ -106,6 +106,17 @@ blockquote { margin: 0; align-self: end; padding: 28px; background: var(--teal);
 .support-button { width: 100%; margin-top: 26px; background: var(--orange); }
 .support-button:hover, .support-button:focus-visible { box-shadow: 5px 5px 0 var(--lime-strong); }
 .support-card small { display: block; margin-top: 20px; color: #61766f; font-size: 12px; line-height: 1.6; }
+.bank-support { margin-top: 22px; padding: 20px; background: #fff; border: 1px solid var(--line); }
+.bank-title { margin: 0 0 14px; color: var(--teal); font-size: 11px; font-weight: 950; letter-spacing: .14em; text-transform: uppercase; }
+.iban-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.iban-row > div { min-width: 0; display: grid; gap: 5px; }
+.iban-row span { color: #6b7f78; font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.iban-row strong { font-size: 16px; letter-spacing: .035em; overflow-wrap: anywhere; }
+.iban-copy { min-height: 42px; padding: 0 13px; flex: none; border: 2px solid var(--ink); background: var(--lime); color: var(--ink); cursor: pointer; font: inherit; font-size: 10px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
+.iban-copy:hover, .iban-copy:focus-visible { transform: translate(-2px,-2px); box-shadow: 3px 3px 0 var(--ink); }
+.account-holder { margin: 14px 0 0; color: #536a62; font-size: 13px; }
+.copy-status { min-height: 18px; margin: 8px 0 0; color: var(--teal); font-size: 12px; font-weight: 800; }
+
 
 .studio-section { padding: 110px 0; background: var(--lime); border-block: 2px solid var(--ink); }
 .studio-grid { display: grid; grid-template-columns: .6fr 1.4fr; gap: 70px; }
@@ -221,6 +232,8 @@ blockquote { margin: 0; align-self: end; padding: 28px; background: var(--teal);
   .support-section { padding: 78px 0; }
   .support-card { padding: 30px 22px; box-shadow: 7px 7px 0 var(--orange); }
   .support-points { display: grid; }
+  .iban-row { align-items: stretch; flex-direction: column; }
+  .iban-copy { width: 100%; }
   .studio-section { padding: 78px 0; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; align-items: start; }
   .game-hero { padding: 48px 0 72px; }
