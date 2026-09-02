@@ -57,8 +57,17 @@
         <aside class="support-card">
           <p class="support-label">Direkt unterstützen</p>
           <h3>Jeder Beitrag hilft.</h3>
-          <p>Du bestimmst den Betrag selbst und wirst sicher zu PayPal weitergeleitet.</p>
+          <p>Du bestimmst den Betrag selbst und kannst Remedion Games per PayPal oder Banküberweisung unterstützen.</p>
           <a class="button support-button" href="https://www.paypal.me/reneingerl" target="_blank" rel="noopener noreferrer" aria-label="Remedion Games mit PayPal unterstützen – öffnet in neuem Tab">Mit PayPal unterstützen <span aria-hidden="true">↗</span></a>
+          <div class="bank-support">
+            <p class="bank-title">Banküberweisung</p>
+            <div class="iban-row">
+              <div><span>IBAN</span><strong>AT12 2024 1050 0135 1211</strong></div>
+              <button class="iban-copy" type="button" data-iban="AT122024105001351211">IBAN kopieren</button>
+            </div>
+            <p class="account-holder">Kontoinhaber: <strong>René Ingerl</strong></p>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
           <small>Freiwillige Unterstützung ohne Gegenleistung. Es handelt sich nicht um einen Kauf; eine Spendenbescheinigung wird nicht ausgestellt.</small>
         </aside>
       </div>
@@ -66,5 +75,39 @@
     <section class="studio-section" id="studio"><div class="shell studio-grid"><p class="eyebrow light"><span></span>Das Studio</p><div><h2>Klein im Team.<br>Groß im Chaos.</h2><p>Remedion Games ist ein unabhängiges Studio von René Ingerl. Hier entstehen Games mit eigener Handschrift – direkt, verspielt und ohne seelenlosen Einheitsbrei.</p><a class="button button-dark" href="mailto:remediongames@gmail.com">Kontakt aufnehmen</a></div></div></section>
   </main>
   <footer class="site-footer"><div class="shell footer-grid"><div><a href="./" aria-label="Remedion Games Startseite"><img class="footer-logo" src="remedion-games-logo.webp" alt="" aria-hidden="true"></a><p class="footer-tagline">Independent games from Austria.</p></div><nav class="footer-links" aria-label="Fußnavigation"><a href="frogslap.html">FrogSlap</a><a href="#support">Unterstützen</a><a href="mailto:remediongames@gmail.com">E-Mail</a><a href="https://youtube.com/@remediongames" target="_blank" rel="noreferrer">YouTube</a><a href="privacy.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav><p class="footer-copy">© 2026 Remedion Games</p></div></footer>
+  <script>
+    (() => {
+      const button = document.querySelector(".iban-copy");
+      const status = document.querySelector(".copy-status");
+      if (!button || !status) return;
+      const originalText = button.textContent;
+      button.addEventListener("click", async () => {
+        const iban = button.dataset.iban;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(iban);
+          } else {
+            const field = document.createElement("textarea");
+            field.value = iban;
+            field.setAttribute("readonly", "");
+            field.style.position = "fixed";
+            field.style.opacity = "0";
+            document.body.appendChild(field);
+            field.select();
+            if (!document.execCommand("copy")) throw new Error("copy failed");
+            field.remove();
+          }
+          button.textContent = "Kopiert!";
+          status.textContent = "IBAN wurde kopiert.";
+          window.setTimeout(() => {
+            button.textContent = originalText;
+            status.textContent = "";
+          }, 2500);
+        } catch {
+          status.textContent = "Kopieren fehlgeschlagen. Bitte die IBAN markieren.";
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
