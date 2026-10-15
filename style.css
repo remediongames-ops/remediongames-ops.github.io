@@ -92,7 +92,7 @@ blockquote { margin: 0; align-self: end; padding: 28px; background: var(--teal);
 .quote-mark { display: block; color: var(--lime); font-size: 54px; line-height: .7; }
 
 /* Clay Hero: a quiet first look, alongside the released game. */
-.clay-teaser { grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 36px; scroll-margin-top: 32px; }
+.game-feature.clay-teaser { grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 36px; scroll-margin-top: 32px; }
 .clay-copy { min-width: 0; }
 .clay-copy h3 { font-size: clamp(3rem, 5vw, 4.8rem); }
 .clay-copy > .clay-tagline { margin: 28px 0 18px; color: var(--ink); font-size: clamp(1.6rem, 2.6vw, 2.25rem); font-weight: 800; line-height: 1.15; letter-spacing: -.035em; }
@@ -102,10 +102,10 @@ blockquote { margin: 0; align-self: end; padding: 28px; background: var(--teal);
 .clay-portrait img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
 .clay-portrait figcaption { padding: 14px 18px; border-top: 1px solid var(--line); background: var(--paper); color: var(--teal); font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
 @media (max-width: 900px) {
-  .clay-teaser { grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+  .game-feature.clay-teaser { grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
 }
 @media (max-width: 640px) {
-  .clay-teaser { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .game-feature.clay-teaser { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .clay-copy > .clay-tagline { margin-top: 22px; }
   .clay-portrait { box-shadow: 6px 6px 0 var(--paper-deep); }
 }
