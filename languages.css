@@ -1,0 +1,6 @@
+.language-nav { display:flex; flex:0 0 auto; gap:3px; border:1px solid #b7c6bb; border-radius:99px; padding:3px; background:#fbf5e9; color:#173d40; }
+.language-nav a { display:block; padding:6px 9px; border-radius:99px; font:700 12px/1.35 Arial,sans-serif; text-decoration:none; }
+.language-nav a[aria-current] { background:#075e66; color:#fff; }
+.language-nav a:hover,.language-nav a:focus-visible { outline:2px solid #b77f1c; outline-offset:1px; }
+.language-bar { display:flex; justify-content:flex-end; padding-top:1rem; }
+@media (max-width:900px) and (min-width:761px) { .site-header { flex-wrap:wrap; } }
